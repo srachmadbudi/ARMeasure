@@ -1,0 +1,1 @@
+[{"outputType":{"type":"INSTANT_APP_MANIFEST"},"apkData":{"type":"MAIN","splits":[],"versionCode":900,"versionName":"9.0","enabled":true,"outputFile":"first-debug.apk","fullName":"debug","baseName":"debug","dirName":""},"path":"AndroidManifest.xml","properties":{"packageId":"com.vuforia.engine.CoreSamples","split":"","minSdkVersion":"19"}}]

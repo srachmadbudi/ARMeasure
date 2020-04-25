@@ -1,0 +1,287 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.vuforia.engine.CoreSamples"
+4    android:versionCode="900"
+5    android:versionName="9.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml
+10
+11    <uses-feature android:glEsVersion="0x00020000" />
+11-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:5:5-54
+11-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:5:19-51
+12
+13    <!--
+14         The application requires a camera.
+15
+16         NOTE: Any application that requests the CAMERA permission but does not
+17         declare any camera features with the <uses-feature> element will be
+18         assumed to use all camera features (auto-focus and flash). Thus, the
+19         application will not be compatible with devices that do not support
+20         all camera features. Please use <uses-feature> to declare only the
+21         camera features that your application does need. For instance, if you
+22         request the CAMERA permission, but you do not need auto-focus or
+23         flash, then declare only the android.hardware.camera feature. The
+24         other camera features that you do not request will no longer be
+25         assumed as required.
+26    -->
+27    <uses-feature android:name="android.hardware.camera" />
+27-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:21:5-60
+27-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:21:19-57
+28
+29<!--         Add this permission to get access to the camera. -->
+30    <uses-permission android:name="android.permission.CAMERA" />
+30-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:26:5-65
+30-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:26:22-62
+31
+32<!--         Add this permission to allow opening network sockets. -->
+33    <uses-permission android:name="android.permission.INTERNET" />
+33-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:31:5-66
+33-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:31:22-64
+34
+35    <!--
+36        Add this permission to check which network access properties (e.g.
+37        active type: 3G/WiFi).
+38    -->
+39    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+39-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:37:5-79
+39-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:37:22-76
+40    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+40-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:39:5-79
+40-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:39:22-77
+41
+42    <!--
+43      NOTE: The setting 'android:launchMode="singleTask"' makes sure
+44      that the activity can begin only one task and the device can hold only
+45      one instance of the activity at a time. However, it allows other
+46      activities to be part of its task (unlike the 'singleInstance' mode).
+47      It's at the root of the activity stack, but other activities (necessarily
+48      "standard" and "singleTop" activities) can be launched into the same task.
+49      If this attribute is not set, the default value 'standard' is used, which
+50      would allow the activity to be launched multiple times.
+51    -->
+52    <application
+52-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:51:5-190:19
+53        android:allowBackup="true"
+53-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:56:9-35
+54        android:debuggable="true"
+55        android:description="@string/app_description"
+55-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:54:9-54
+56        android:icon="@drawable/icon"
+56-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:52:9-38
+57        android:label="@string/app_name"
+57-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:53:9-41
+58        android:launchMode="singleTask"
+58-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:55:9-40
+59        android:supportsRtl="false"
+59-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:58:9-36
+60        android:testOnly="true"
+61        android:theme="@style/SampleAppsTheme" >
+61-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:57:9-47
+62
+63        <!-- The following must be present to facilitate use of ARCore, if available -->
+64        <meta-data
+64-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:62:9-81
+65            android:name="com.google.ar.core"
+65-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:62:20-53
+66            android:value="optional" />
+66-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:62:54-78
+67
+68        <!--
+69          NOTE: The values in 'android:configChanges' ensure that Android will 
+70          not destroy and re-create the activity when the user flips the 
+71          keyboard, changes the orientation of the device, or the actual or 
+72          physical screen resolution changes, but calls the Activity's 
+73          onConfigurationChanged() function instead.
+74
+75          NOTE 2: In order to prevent automatic reactions to orientation
+76          changes in addition to setting proper values for
+77          'android:configChanges', you also must explicitly specify the screen
+78          orientation used by the application, either by setting the attribute
+79          'android:screenOrientation' or in code by calling
+80          Activity.setRequestedOrientation().
+81        -->
+82        <!-- Splash Screen Activity -->
+83        <activity
+83-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:80:10-91:21
+84            android:name="com.vuforia.engine.CoreSamples.ui.ActivityList.ActivitySplashScreen"
+84-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:81:13-95
+85            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+85-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:82:13-93
+86            android:noHistory="true"
+86-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:84:13-37
+87            android:screenOrientation="portrait" >
+87-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:83:13-49
+88            <intent-filter>
+88-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:86:13-90:29
+89                <action android:name="android.intent.action.MAIN" />
+89-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:87:17-69
+89-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:87:25-66
+90
+91                <category android:name="android.intent.category.LAUNCHER" />
+91-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:89:17-77
+91-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:89:27-74
+92            </intent-filter>
+93        </activity>
+94        <activity
+94-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:93:9-98:20
+95            android:name="com.vuforia.engine.CoreSamples.ui.ActivityList.ActivityLauncher"
+95-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:94:13-91
+96            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+96-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:95:13-93
+97            android:screenOrientation="portrait" >
+97-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:96:13-49
+98        </activity>
+99        <activity
+99-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:100:10-106:20
+100            android:name="com.vuforia.engine.CoreSamples.ui.ActivityList.AboutScreen"
+100-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:101:13-86
+101            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+101-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:102:13-93
+102            android:noHistory="true"
+102-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:104:13-37
+103            android:screenOrientation="portrait" >
+103-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:103:13-49
+104        </activity>
+105        <activity
+105-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:108:9-114:20
+106            android:name="com.vuforia.engine.CoreSamples.app.ImageTargets.ImageTargets"
+106-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:109:13-88
+107            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+107-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:110:13-93
+108            android:launchMode="singleTask"
+108-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:112:13-44
+109            android:theme="@style/SampleAppsTheme" >
+109-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:111:13-51
+110        </activity>
+111        <activity
+111-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:116:9-123:20
+112            android:name="com.vuforia.engine.CoreSamples.app.ModelTargets.ModelTargets"
+112-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:117:13-88
+113            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+113-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:118:13-93
+114            android:launchMode="singleTask"
+114-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:121:13-44
+115            android:screenOrientation="landscape"
+115-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:119:13-50
+116            android:theme="@style/SampleAppsTheme" >
+116-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:120:13-51
+117        </activity>
+118        <activity
+118-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:125:9-132:20
+119            android:name="com.vuforia.engine.CoreSamples.app.GroundPlane.GroundPlane"
+119-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:126:13-86
+120            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+120-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:127:13-93
+121            android:launchMode="singleTask"
+121-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:130:13-44
+122            android:screenOrientation="landscape"
+122-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:128:13-50
+123            android:theme="@style/SampleAppsTheme" >
+123-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:129:13-51
+124        </activity>
+125        <activity
+125-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:134:9-140:20
+126            android:name="com.vuforia.engine.CoreSamples.app.VuMark.VuMark"
+126-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:135:13-76
+127            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+127-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:136:13-93
+128            android:launchMode="singleTask"
+128-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:138:13-44
+129            android:theme="@style/SampleAppsTheme" >
+129-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:137:13-51
+130        </activity>
+131        <activity
+131-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:142:9-148:20
+132            android:name="com.vuforia.engine.CoreSamples.app.CylinderTargets.CylinderTargets"
+132-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:143:13-94
+133            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+133-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:144:13-93
+134            android:launchMode="singleTask"
+134-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:146:13-44
+135            android:theme="@style/SampleAppsTheme" >
+135-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:145:13-51
+136        </activity>
+137        <activity
+137-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:150:9-156:20
+138            android:name="com.vuforia.engine.CoreSamples.app.VirtualButtons.VirtualButtons"
+138-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:151:13-92
+139            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+139-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:152:13-93
+140            android:launchMode="singleTask"
+140-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:154:13-44
+141            android:theme="@style/SampleAppsTheme" >
+141-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:153:13-51
+142        </activity>
+143        <activity
+143-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:158:9-164:20
+144            android:name="com.vuforia.engine.CoreSamples.app.UserDefinedTargets.UserDefinedTargets"
+144-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:159:13-100
+145            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+145-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:160:13-93
+146            android:launchMode="singleTask"
+146-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:162:13-44
+147            android:theme="@style/SampleAppsTheme" >
+147-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:161:13-51
+148        </activity>
+149        <activity
+149-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:166:9-172:20
+150            android:name="com.vuforia.engine.CoreSamples.app.MultiTargets.MultiTargets"
+150-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:167:13-88
+151            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+151-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:168:13-93
+152            android:launchMode="singleTask"
+152-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:170:13-44
+153            android:theme="@style/SampleAppsTheme" >
+153-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:169:13-51
+154        </activity>
+155        <activity
+155-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:174:9-180:20
+156            android:name="com.vuforia.engine.CoreSamples.app.CloudRecognition.CloudReco"
+156-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:175:13-89
+157            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+157-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:176:13-93
+158            android:launchMode="singleTask"
+158-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:178:13-44
+159            android:theme="@style/SampleAppsTheme" >
+159-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:177:13-51
+160        </activity>
+161        <activity
+161-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:182:9-188:20
+162            android:name="com.vuforia.engine.CoreSamples.app.ObjectRecognition.ObjectTargets"
+162-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:183:13-94
+163            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+163-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:184:13-93
+164            android:launchMode="singleTask"
+164-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:186:13-44
+165            android:theme="@style/SampleAppsTheme" >
+165-->E:\Projects\ARMeasure\samples\first\app\src\main\AndroidManifest.xml:185:13-51
+166        </activity>
+167
+168        <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
+169        <meta-data
+169-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:33:9-35:41
+170            android:name="com.google.ar.core.min_apk_version"
+170-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:34:13-62
+171            android:value="190519000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+171-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:35:13-38
+172        <activity
+172-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:37:9-43:80
+173            android:name="com.google.ar.core.InstallActivity"
+173-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:38:13-62
+174            android:configChanges="keyboardHidden|orientation|screenSize"
+174-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:39:13-74
+175            android:excludeFromRecents="true"
+175-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:40:13-46
+176            android:exported="false"
+176-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:41:13-37
+177            android:launchMode="singleTop"
+177-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:42:13-43
+178            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
+178-->[com.google.ar:core:1.10.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\488907c56b66733db7bd99aec4c9110e\core-1.10.0\AndroidManifest.xml:43:13-77
+179    </application>
+180
+181</manifest>
