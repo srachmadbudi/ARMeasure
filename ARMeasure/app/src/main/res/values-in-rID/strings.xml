@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ArcoreMeasurement</string>
+    <string name="to_measurement_button">Ukur sekarang!</string>
+    <string name="distance_from_camera">Jarak dari kamera</string>
+    <string name="distance_of_2_points">Jarak antara 2 titik</string>
+    <string name="distance_of_multiple_points">Jarak antara banyak titik</string>
+    <string name="distance_from_ground">Jarak dari tanah</string>
+    <string name="clear">Bersihkan</string>
+</resources>
