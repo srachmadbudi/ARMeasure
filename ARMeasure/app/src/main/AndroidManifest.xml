@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="id.ac.its.armeasure">
+    package="id.ac.its.arealsure">
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -17,9 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="id.ac.its.armeasure.Measurement" />
+        <activity android:name="id.ac.its.arealsure.Measurement" />
         <activity
-            android:name="id.ac.its.armeasure.ArcoreMeasurement"
+            android:name="id.ac.its.arealsure.ArcoreMeasurement"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:screenOrientation="locked"

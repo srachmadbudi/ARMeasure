@@ -1,4 +1,4 @@
-package id.ac.its.armeasure
+package id.ac.its.arealsure
 
 object Constants{
     const val maxNumMultiplePoints = 6

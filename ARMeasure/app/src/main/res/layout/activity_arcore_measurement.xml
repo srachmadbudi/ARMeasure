@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="id.ac.its.armeasure.ArcoreMeasurement">
+    tools:context="id.ac.its.arealsure.ArcoreMeasurement">
 
     <LinearLayout
         android:layout_width="match_parent"

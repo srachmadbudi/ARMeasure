@@ -1,4 +1,4 @@
-package id.ac.its.armeasure
+package id.ac.its.arealsure
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

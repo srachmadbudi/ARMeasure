@@ -1,4 +1,4 @@
-package id.ac.its.armeasure
+package id.ac.its.arealsure
 
 import org.junit.Test
 

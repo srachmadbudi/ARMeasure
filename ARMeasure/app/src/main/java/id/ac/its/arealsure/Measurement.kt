@@ -1,4 +1,4 @@
-package id.ac.its.armeasure
+package id.ac.its.arealsure
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +22,6 @@ import com.google.ar.sceneform.math.Vector3
 import com.google.ar.sceneform.rendering.*
 import com.google.ar.sceneform.ux.ArFragment
 import com.google.ar.sceneform.ux.TransformableNode
-import id.ac.its.armeasure.R
 import com.google.ar.sceneform.rendering.Color as arColor
 import java.util.Objects
 import kotlin.math.pow
